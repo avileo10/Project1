@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" href="project1.css">
+	<link href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap" rel="stylesheet">
+	  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+</head>
+
+<body>
+<nav>
+	<div class="logo"> <h1 class="animated infinite pulse" style="font-size: 20px;"> World Wide</h1>
+  </div>
+	<div class="menu">
+		<a href="#" >Home</a>
+		<a href="gallery.html">Gallery</a>
+        <a href="#">About</a>
+		<a href="#">Contact</a>
+    
+ <a><button class="login-btn" onclick="openLogin()" >LOGIN</button></a>
+ </div>
+
+
+<div id="loginPopup" class="popup">
+  <div class="popup-content">
+    <span class="close" onclick="closeLogin()">&times;</span>
+    
+<div class="myform">
+    <h2>Login</h2>
+    <form onsubmit="return validateform()" method="post" action="project1.php">
+      <input type="text" id="username" name="name" placeholder="Enter Username" required><br>
+	  <span id="errorMsg" style="color: red;"></span><br>
+
+      <input type="password" id="password" name="password" placeholder="Enter Password" required><br><br>
+      <button class="login" value="submit" type="submit">Submit </button>
+    </form>
+</div>
+  </div>
+</div>
+		</nav>
+
+	<main>
+		<section>
+			<h3>Explore </h3>
+			<h1>Your Amazing Country<span class="change_content"> </span>  </h1>
+			<p>"Let's Discover The World Together"</p>
+			<a href="#" class="btnone">learn more</a>
+			<a href="#" class="btntwo">signup here</a>
+		</section>
+	</main>
+    <article>
+        <div class="package">
+	       <div class="one">
+		   <img src="https://travel-dmc.com/wp-content/uploads/2019/05/Eiffel-Tower.jpg" height="230px"><br>
+			<a href="https://www.gtholidays.in/packages/international/europe/france-tour-packages/">Paris</a>
+			</div>
+			<div class="two">
+				<img src="https://www.travelandleisure.com/thmb/BT0NbtsK80y_P6FkFQvUzeIwvsw=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/TAL-koh-phi-phi-PLACESTHAILAND1023-09b9d347b3cd4844b4ae19e4e06a9a6d.jpg" height="230px"><br>
+			    <a href="https://www.gtholidays.in/packages/international/asia/thailand-tour-packages/?gad_source=1&gbraid=0AAAAABic5erY4orbHdc1vpPD7Yjl-UBci&gclid=CjwKCAjw5PK_BhBBEiwAL7GTPdwZuIxJ70J2zZ5Vvl_e7WnvwNt5bWgX5Y1ReqrvJs3csqFnQon7vhoC9s0QAvD_BwE">Thailland</a>
+				</div>
+				<div class="three">
+					<img src="https://media.istockphoto.com/id/519464988/photo/busy-shoppping-street-in-shanghai-china-at-night.jpg?s=612x612&w=0&k=20&c=RcS6SuoD1GKZj4NeYPKOHaNRIR-eY_ZhPhwbdr67xPg=" height="230px"><br>
+					<a href="https://www.gtholidays.in/packages/international/asia/china-tour-packages/">China</a>
+					</div>  
+        </div>  
+    </article>
+    <div class="customers">
+      <img src="a1.png" height="230px">
+      <img src="a2.png" height="230px">
+      <img src="a3.png" height="230px">
+    </div>
+
+    <div class="footer">
+    
+      <ul>
+        <h2>Corporate Office</h2>
+        <li>WorldWide pvt.ltd</li>
+        <li>Novel Tech Park,</li>
+        <li>Opposite to 1 MG m=Mall</li>
+        <li>Bangalore-560042</li>
+        <li>karnataka,india</li>
+      </ul>
+    
+      
+      <ul>
+        <h2>Head Office</h2>
+        <li>WorldWide Pvt.ltd</li>
+        <li>no.1,Gemini Parsn</li>
+        <li>Kodambakkam High Road</li>
+        <li>Nungabakkam,Channai-600006</li>
+        <li>Tamilnadu,india</li>
+      </ul>
+      <ul>
+        <h2>Our Branches</h2>
+        <li>Mumbai</li>
+        <li>Hyderabad</li>
+        <li>Chennai</li>
+        <li>Coimbatore</li>
+        <li>Madurai</li>
+      </ul>
+    </div>
+    <div class="footer-one">
+      <ul>Copyright @ 2025 by World Wide Pvt</ul>
+      <ul>Privacy Policy | terms & conditions</ul>
+      <ul>LLd All Right Reserved</ul>
+      <ul>Cancellations & Refund Policy</ul>
+    </div>
+    </div>
+
+	<script>
+		function openLogin() {
+  document.getElementById("loginPopup").style.display = "block";
+  document.getElementById("errorMsg").innerText = "";
+}
+
+function closeLogin() {
+  document.getElementById("loginPopup").style.display = "none";
+}
+
+function validateform() {
+  let username = document.getElementById("username").value.trim();
+  let password = document.getElementById("password").value.trim();
+  let errorMsg = document.getElementById("errorMsg");
+
+  if ( password.length <= 8 ) {
+    errorMsg.innerText = "Password must be atleast 8 characters.";
+    return false;
+  }
+  
+  else{
+    alert("Login successful!");
+    closeLogin();
+    return true; 
+  }
+
+  
+}
+
+</script>
+
+</body>
+</html>
